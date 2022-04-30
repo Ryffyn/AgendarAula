@@ -1,0 +1,79 @@
+
+
+
+<app-navbar></app-navbar>
+
+<body>
+  <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-2 sidebar">
+
+          <app-sidebar></app-sidebar>
+
+
+        </div>
+
+        <div class="col-md-6" >
+
+          <div class="card" style="margin-top:20px;">
+            <div class="card-header">
+              Register
+            </div>
+            <form>
+
+           
+         
+
+              <div class="form-group">
+                <label>Teacher</label>
+                <input type="text" [(ngModel)]="scheduleTeacher" name="deviceCategory" class="form-control cCor">
+              </div>
+
+              <div class="form-group">
+                <label>Date</label>
+                <input type="datetime-local" [(ngModel)]="scheduleDate" id="scheduleDate" name="scheduleDate">
+              </div>
+              
+
+              <div class="card-footer">
+                <button type="button" (click)="onCreateCompany()"  class="btn btn-secondary btnSalvar" >Submit</button>
+              </div>
+            </form>
+          </div>
+
+
+
+
+        </div>
+
+        <div class="col-md-6">
+
+
+
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+<style>
+
+.sidebar{
+  border-right:1px solid #ccccc0;
+  height:55em;
+  margin-left:-15px
+}
+
+
+
+
+</style>
+

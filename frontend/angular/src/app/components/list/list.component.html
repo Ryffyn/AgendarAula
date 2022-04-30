@@ -1,0 +1,79 @@
+
+<script src="https://kit.fontawesome.com/1dcc6a1da6.js" crossorigin="anonymous"></script>
+
+
+<app-navbar></app-navbar>
+
+<body>
+  <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-2 sidebar">
+
+          <app-sidebar></app-sidebar>
+
+
+        </div>
+
+
+        <div class="col-md-6">
+
+
+          <div class="card" id="card-table">
+            <div class="card-header">
+              Lessons
+            </div>
+
+            <table class="table">
+              <thead>
+              <tr>
+
+                <th scope="col">UserId</th>
+                <th scope="col">Teacher</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+              <tbody id="conteudo-tabela">
+
+                <tr *ngFor="let schedule of schedules" (click)="onDeleteCompany(schedule.id)">
+
+                  <td>{{schedule.userId}}</td>
+                  <td>{{schedule.teacher}}</td>
+                  <td>{{schedule.date}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+
+
+
+</body>
+
+
+
+<style>
+
+.sidebar{
+  border-right:1px solid #ccccc0;
+  height:55em;
+  margin-left:-15px
+}
+
+#card-table{
+  margin-top:20px;
+}
+
+.panel{
+  border: 1px solid #ccccc0;
+  border-radius: 20px;
+  margin-top:10px;
+}
+
+</style>
+
